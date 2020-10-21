@@ -139,10 +139,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="LinkedQueue.cpp" />
-    <ClCompile Include="SLinkedList.cpp" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="LinkedQueue.h" />
     <ClInclude Include="QueueEmpty.h" />
     <ClInclude Include="SLinkedList.h" />

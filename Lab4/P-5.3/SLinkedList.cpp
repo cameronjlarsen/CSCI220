@@ -2,12 +2,12 @@
 
 template <typename E>
 SLinkedList<E>::SLinkedList()				// constructor
-    : head(NULL) { }
+    : head(nullptr) { }
 
 template <typename E>
 bool SLinkedList<E>::empty() const			// is list empty?
 {
-    return head == NULL;
+    return head == nullptr;
 }
 
 template <typename E>

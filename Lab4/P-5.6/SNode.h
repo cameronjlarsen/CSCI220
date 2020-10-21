@@ -1,7 +1,8 @@
-template <typename E>
-class SNode {					// singly linked list node
+template <typename A>
+class SNode {					        // singly linked list node
 private:
-    E elem;					// linked list element value
-    SNode<E>* next;				// next item in the list
-    friend class SLinkedList<E>;		// provide SLinkedList access
+    A elem;					            // linked list element value
+    SNode<A>* next;	                // next item in the list
+    template<typename E>
+    friend class SLinkedList;		    // provide SLinkedList access
 };

@@ -2,22 +2,22 @@
 
 template <typename T>
 LinkedStack<T>::LinkedStack()
-	: S(), n(0) {}
+	: list(), num_elements(0) {}
 
 template <typename T>
 int LinkedStack<T>::size() const
 {
-	return n;						// number of items in the stack
+	return num_elements;						// number of items in the stack
 }
 
 template <typename T>
 bool LinkedStack<T>::empty() const
 {
-	return n == 0;					// is the stack empty?
+	return num_elements == 0;					// is the stack empty?
 }
 
 template <typename T>
-const Elem& LinkedStack<T>::top() const throw(StackEmpty)
+const T& LinkedStack<T>::top() const
 {	// get the top element
 	try {
 		if (empty())
@@ -27,14 +27,14 @@ const Elem& LinkedStack<T>::top() const throw(StackEmpty)
 		return;
 	}
 		// do stuff
-	return S.front();
+	return list.front();
 }
 
 template <typename T>
-void LinkedStack<T>::push(const Elem& e)
+void LinkedStack<T>::push(const T& e)
 {	// push element onto stack
-	++n;
-	S.addFront(e);
+	++num_elements;
+	list.addFront(e);
 }
 
 template <typename T>
@@ -47,6 +47,6 @@ void LinkedStack<T>::pop()
 	catch (StackEmpty) {
 		return;
 	}
-	--n;
-	S.removeFront();
+	--num_elements;
+	list.removeFront();
 }

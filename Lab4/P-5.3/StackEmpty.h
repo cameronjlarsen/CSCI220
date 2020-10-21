@@ -1,5 +1,6 @@
 #pragma once
 #include <exception>
+#include <string>
 class StackEmpty:public std::exception
 {
 public:
