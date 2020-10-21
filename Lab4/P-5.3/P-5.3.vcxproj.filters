@@ -29,10 +29,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="SLinkedList.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="LinkedStack.cpp">
+    <ClCompile Include="SLinkedStackTest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -17,7 +17,7 @@ bool LinkedQueue<E>::empty() const		// is the queue empty?
 }
 // get the front element
 template <typename E>
-const Elem& LinkedQueue<E>::front() const throw(QueueEmpty) {
+const Elem& LinkedQueue<E>::front() const {
     if (empty())
         throw QueueEmpty("front of empty queue");
     return S.front();				// list front is queue front
@@ -31,9 +31,10 @@ void LinkedQueue<E>::enqueue(const Elem& e) {
 }
 // dequeue element at front
 template <typename E>
-void LinkedQueue<E>::dequeue() throw(QueueEmpty) {
+void LinkedQueue<E>::dequeue() {
     if (empty())
         throw QueueEmpty("dequeue of empty queue");
     S.remove();					// remove from list front
     n--;
 }
+

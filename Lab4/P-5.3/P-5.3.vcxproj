@@ -145,8 +145,7 @@
     <ClInclude Include="StackEmpty.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="LinkedStack.cpp" />
-    <ClCompile Include="SLinkedList.cpp" />
+    <ClCompile Include="SLinkedStackTest.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
