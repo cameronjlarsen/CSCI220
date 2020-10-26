@@ -12,8 +12,8 @@ public:
 	LinkedStack();								// constructor
 	int size() const;							// number of items in the stack
 	bool empty() const;							// is the stack empty?
-	const T& top() const;	// the top element
-	void push(const T& e);					// push element onto stack
+	const T& top() const;						// the top element
+	void push(const T& e);						// push element onto stack
 	void pop();									// pop the stack
 private:
 	SLinkedList<T> list;						// linked list of elements

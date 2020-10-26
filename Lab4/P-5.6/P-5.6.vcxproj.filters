@@ -18,14 +18,19 @@
     <ClInclude Include="LinkedQueue.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SLinkedList.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SNode.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="QueueEmpty.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\P-5.3\LinkedStack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\P-5.3\SNode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="SLinkedQueueTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

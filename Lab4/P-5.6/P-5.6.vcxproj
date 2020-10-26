@@ -88,6 +88,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\camjl\source\repos\CSCI220\Lab4\P-5.3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -139,10 +140,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\P-5.3\LinkedStack.h" />
+    <ClInclude Include="..\P-5.3\SNode.h" />
     <ClInclude Include="LinkedQueue.h" />
     <ClInclude Include="QueueEmpty.h" />
-    <ClInclude Include="SLinkedList.h" />
-    <ClInclude Include="SNode.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="SLinkedQueueTest.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
