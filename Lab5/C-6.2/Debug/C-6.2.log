@@ -1,0 +1,5 @@
+﻿  ShrinkingVector.cpp
+C:\Users\camjl\source\repos\CSCI220\Lab5\C-6.2\ShrinkingVector.cpp(27,25): warning C4101: 'e': unreferenced local variable
+  ShrinkingVectorTest.cpp
+  Generating Code...
+  C-6.2.vcxproj -> C:\Users\camjl\source\repos\CSCI220\Lab5\Debug\C-6.2.exe
