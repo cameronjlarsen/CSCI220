@@ -1,0 +1,12 @@
+template <typename E>
+class SLinkedList {				// a singly linked list
+public:
+    SLinkedList();				// empty list constructor
+    ~SLinkedList();				// destructor
+    bool empty() const;				// is list empty?
+    const E& front() const;			// return front element
+    void addFront(const E& e);			// add to front of list
+    void removeFront();				// remove front item list
+private:
+    SNode<E>* head;				// head of the list
+};
