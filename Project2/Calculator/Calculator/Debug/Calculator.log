@@ -1,0 +1,9 @@
+﻿  Calculator.cpp
+C:\Users\camjl\source\repos\CSCI220\Project2\Calculator\Calculator\Calculator.cpp(21,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\camjl\source\repos\CSCI220\Project2\Calculator\Calculator\Calculator.cpp(92,13): warning C4018: '<': signed/unsigned mismatch
+C:\Users\camjl\source\repos\CSCI220\Project2\Calculator\Calculator\Calculator.cpp(119,26): warning C4244: 'argument': conversion from 'double' to 'const A', possible loss of data
+          with
+          [
+              A=int
+          ]
+  Calculator.vcxproj -> C:\Users\camjl\source\repos\CSCI220\Project2\Calculator\Debug\Calculator.exe
