@@ -32,9 +32,6 @@
     <ClCompile Include="Calculator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="LinkedList.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="CalculatorTest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

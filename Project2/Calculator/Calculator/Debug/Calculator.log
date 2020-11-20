@@ -1,9 +1,11 @@
 ﻿  Calculator.cpp
-C:\Users\camjl\source\repos\CSCI220\Project2\Calculator\Calculator\Calculator.cpp(21,20): warning C4018: '<': signed/unsigned mismatch
-C:\Users\camjl\source\repos\CSCI220\Project2\Calculator\Calculator\Calculator.cpp(92,13): warning C4018: '<': signed/unsigned mismatch
-C:\Users\camjl\source\repos\CSCI220\Project2\Calculator\Calculator\Calculator.cpp(119,26): warning C4244: 'argument': conversion from 'double' to 'const A', possible loss of data
+C:\Users\camjl\source\repos\CSCI220\Project2\Calculator\Calculator\Calculator.cpp(20,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\camjl\source\repos\CSCI220\Project2\Calculator\Calculator\Calculator.cpp(77,29): warning C4101: 'exp': unreferenced local variable
+C:\Users\camjl\source\repos\CSCI220\Project2\Calculator\Calculator\Calculator.cpp(107,13): warning C4018: '<': signed/unsigned mismatch
+C:\Users\camjl\source\repos\CSCI220\Project2\Calculator\Calculator\Calculator.cpp(134,26): warning C4244: 'argument': conversion from 'double' to 'const A', possible loss of data
           with
           [
               A=int
           ]
+C:\Users\camjl\source\repos\CSCI220\Project2\Calculator\Calculator\Calculator.cpp(213): warning C4715: 'Calculator::assoc': not all control paths return a value
   Calculator.vcxproj -> C:\Users\camjl\source\repos\CSCI220\Project2\Calculator\Debug\Calculator.exe

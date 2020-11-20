@@ -1,7 +1,7 @@
 #include "Calculator.h"
 #include <iostream>
-
-Calculator::Calculator(std::string exp)						// default constructor
+// default constructor
+Calculator::Calculator(std::string exp)						
 :postfix_tokens(""), infix_tokens(""), result(0)
 {
 	setExpr(exp);
@@ -10,10 +10,10 @@ Calculator::Calculator(std::string exp)						// default constructor
 		eval();
 	}
 }
-
-Calculator::~Calculator() {}								// destructor
-
-void Calculator::postfix()			// returns the postfix expression
+// destructor
+Calculator::~Calculator() {}								
+// returns the postfix expression
+void Calculator::postfix()			
 {
 	Stack<char>stk;
 
@@ -41,16 +41,19 @@ void Calculator::postfix()			// returns the postfix expression
 				char c = stk.top();
 				stk.pop();
 				postfix_tokens += c;
+				postfix_tokens += ' ';
 			}
 			if (stk.top() == '(') {
 				char c = stk.top();
 				stk.pop();
 			}
 		}
-
+		// TODO: add asscociativity
 		// if an operator is scanned
 		else if (isOperator(infix_tokens[i])) {
-			while (!stk.empty() && prec(infix_tokens[i]) <= prec(stk.top())) {
+			// while the stack is not empty, the precedence of the operator is <= precedence of
+			// the operator at the top of the stack and the operator is left-to-right asscociative
+			while (!stk.empty() && prec(infix_tokens[i]) <= prec(stk.top()) && assoc(stk.top())) {
 				char c = stk.top();
 				stk.pop();
 				postfix_tokens += c;
@@ -62,17 +65,30 @@ void Calculator::postfix()			// returns the postfix expression
 
 	// pop all remaining elements from the stack
 	while (!stk.empty()){
-		char c = stk.top();
-		stk.pop();
-		postfix_tokens += c;
-		postfix_tokens += ' ';
+		try {
+			if (stk.top() == '(' || stk.top() == ')') {
+				throw InvalidExpression("Invalid expression");
+			}
+			char c = stk.top();
+			stk.pop();
+			postfix_tokens += c;
+			postfix_tokens += ' ';
+		}
+		catch (InvalidExpression& exp) {
+			postfix_tokens = "Invalid Expression";
+			break;
+		}
 	}
 	std::cout << "\nPostfix Expression: " << postfix_tokens;
 
 }
-
-void Calculator::eval()						// returns the result of the expression
+// returns the result of the expression
+void Calculator::eval()						
 {
+	if (postfix_tokens == "Invalid Expression") {
+		infix_tokens = "Invalid Expression";
+		return;
+	}
 	// create stack to store expression
 	Stack<int>stk;
 
@@ -127,18 +143,18 @@ void Calculator::eval()						// returns the result of the expression
 
 	std::cout << "\nResult: " << result;
 }
-
-void Calculator::setExpr(std::string exp)					// receives the infix expression as string and store it
+// receives the infix expression as string and store it
+void Calculator::setExpr(std::string exp)					
 {
 	infix_tokens = exp;
 }
-
-std::string Calculator::getExpr()							// returns the infix expression as string
+// returns the infix expression as string
+std::string Calculator::getExpr()							
 {
 	return infix_tokens;
 }
-
-bool Calculator::isOperator(char input)						// check if input is an operator
+// check if input is an operator
+bool Calculator::isOperator(char input)						
 {
 	switch (input)
 	{
@@ -159,8 +175,8 @@ bool Calculator::isOperator(char input)						// check if input is an operator
 		break;
 	}
 }
-
-int Calculator::prec(char input)							// return precedence value of operator
+// return precedence value of operator
+int Calculator::prec(char input)							
 {
 	switch (input)
 	{
@@ -175,6 +191,23 @@ int Calculator::prec(char input)							// return precedence value of operator
 		return 3;
 	default:
 		return -1;
+		break;
+	}
+}
+// returns associativity of operator: 0 = RL, 1 = LR
+bool Calculator::assoc(char input)							
+{
+	switch (input)
+	{
+	case '+':
+	case '-':
+	case '*':
+	case '/':
+	case '%':
+		return true;
+	case '^':
+		return false;
+	default:
 		break;
 	}
 }
