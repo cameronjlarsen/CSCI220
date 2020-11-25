@@ -141,7 +141,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\BookFiles\LinkedBinaryTree.cpp" />
-    <ClCompile Include="Lab6.cpp" />
+    <ClCompile Include="LinkedBinaryTreeTest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\BookFiles\LinkedBinaryTree.h" />

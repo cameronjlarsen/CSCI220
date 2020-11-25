@@ -15,10 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Lab6.cpp">
+    <ClCompile Include="..\..\BookFiles\LinkedBinaryTree.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\BookFiles\LinkedBinaryTree.cpp">
+    <ClCompile Include="LinkedBinaryTreeTest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
